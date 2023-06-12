@@ -1,4 +1,4 @@
-package com.colloquio.mapper;
+package com.colloquio.repository;
 
 import com.colloquio.model.City;
 import com.colloquio.model.CityDataGeocode;

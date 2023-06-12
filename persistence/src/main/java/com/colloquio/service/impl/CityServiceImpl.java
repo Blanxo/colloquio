@@ -1,6 +1,6 @@
 package com.colloquio.service.impl;
 
-import com.colloquio.mapper.CityRepository;
+import com.colloquio.repository.CityRepository;
 import com.colloquio.model.City;
 import com.colloquio.service.CityService;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,1 +1,455 @@
-{"collection":{"info":{"_postman_id":"d41564d3-640c-42c0-bc7b-a96bcea8a19b","name":"Colloquio","schema":"https://schema.getpostman.com/json/collection/v2.1.0/collection.json","updatedAt":"2023-06-10T08:39:52.000Z","uid":"15674984-d41564d3-640c-42c0-bc7b-a96bcea8a19b"},"item":[{"name":"City Request","item":[{"name":"Geocoding Get City Test","id":"4abbe125-ca0a-4dff-8541-23659cabbd3b","protocolProfileBehavior":{"disableBodyPruning":true},"request":{"method":"GET","header":[],"url":{"raw":"https://geocoding-api.open-meteo.com/v1/search?name=Rome&count=1&language=it","protocol":"https","host":["geocoding-api","open-meteo","com"],"path":["v1","search"],"query":[{"key":"name","value":"Rome"},{"key":"count","value":"1"},{"key":"language","value":"it"}]}},"response":[],"uid":"15674984-4abbe125-ca0a-4dff-8541-23659cabbd3b"},{"name":"Create City","id":"076f90ab-7b7f-4f98-bfe4-865f2a442169","protocolProfileBehavior":{"disableBodyPruning":true},"request":{"method":"POST","header":[],"body":{"mode":"raw","raw":"{\r\n  \"name\": \"Roma\"\r\n}","options":{"raw":{"language":"json"}}},"url":{"raw":"http://localhost:8080/api/city/create","protocol":"http","host":["localhost"],"port":"8080","path":["api","city","create"]}},"response":[],"uid":"15674984-076f90ab-7b7f-4f98-bfe4-865f2a442169"},{"name":"Get City By Id","id":"7eefb25b-e494-448a-ab94-fdf9017e289d","protocolProfileBehavior":{"disableBodyPruning":true},"request":{"method":"GET","header":[],"url":{"raw":"http://localhost:8080/api/city/getById?id=1","protocol":"http","host":["localhost"],"port":"8080","path":["api","city","getById"],"query":[{"key":"id","value":"1","type":"text"}]}},"response":[],"uid":"15674984-7eefb25b-e494-448a-ab94-fdf9017e289d"},{"name":"Get City By Name","id":"60aae5e7-2895-4152-a14d-43afafcbe583","protocolProfileBehavior":{"disableBodyPruning":true},"request":{"method":"GET","header":[],"url":{"raw":"http://localhost:8080/api/city/getByName?name=Napoli","protocol":"http","host":["localhost"],"port":"8080","path":["api","city","getByName"],"query":[{"key":"name","value":"Napoli"}]}},"response":[],"uid":"15674984-60aae5e7-2895-4152-a14d-43afafcbe583"},{"name":"Delete City By Id","id":"d8980cf0-1558-467c-8b81-2b780e47443a","protocolProfileBehavior":{"disableBodyPruning":true},"request":{"method":"DELETE","header":[],"url":{"raw":"http://localhost:8080/api/city/delete?id=1","protocol":"http","host":["localhost"],"port":"8080","path":["api","city","delete"],"query":[{"key":"id","value":"1","type":"text"}]}},"response":[],"uid":"15674984-d8980cf0-1558-467c-8b81-2b780e47443a"}],"id":"438cb447-e6c9-4ac1-b5b9-af55b22d6e06","uid":"15674984-438cb447-e6c9-4ac1-b5b9-af55b22d6e06"}]}}
+{
+  "info": {
+    "_postman_id": "d41564d3-640c-42c0-bc7b-a96bcea8a19b",
+    "name": "Colloquio",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "15674984"
+  },
+  "item": [
+    {
+      "name": "City Requests",
+      "item": [
+        {
+          "name": "Geocoding Get City Test",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://geocoding-api.open-meteo.com/v1/search?name=Rome&count=1&language=it",
+              "protocol": "https",
+              "host": [
+                "geocoding-api",
+                "open-meteo",
+                "com"
+              ],
+              "path": [
+                "v1",
+                "search"
+              ],
+              "query": [
+                {
+                  "key": "name",
+                  "value": "Rome"
+                },
+                {
+                  "key": "count",
+                  "value": "1"
+                },
+                {
+                  "key": "language",
+                  "value": "it"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create City",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"name\": \"Roma\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/city/create",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "city",
+                "create"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get City By Id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/city/getById?id=1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "city",
+                "getById"
+              ],
+              "query": [
+                {
+                  "key": "id",
+                  "value": "1"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get City By Name",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/city/getByName?name=Roma",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "city",
+                "getByName"
+              ],
+              "query": [
+                {
+                  "key": "name",
+                  "value": "Roma"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete City By Id",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/city/delete?id=1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "city",
+                "delete"
+              ],
+              "query": [
+                {
+                  "key": "id",
+                  "value": "1"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "User Requests",
+      "item": [
+        {
+          "name": "Get User By Username",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/user/getByUsername?username=Pippo",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "user",
+                "getByUsername"
+              ],
+              "query": [
+                {
+                  "key": "username",
+                  "value": "Pippo"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create User",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"username\": \"Pippo\",\r\n  \"email\": \"pippoilgrande@gmail.com\",\r\n  \"name\": \"Pippo\",\r\n  \"surname\": \"Rossi\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/user/create",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "user",
+                "create"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Itinerary Requests",
+      "item": [
+        {
+          "name": "Get Itinerary By Username",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/itinerary/getByUsername?username=Pippo",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "itinerary",
+                "getByUsername"
+              ],
+              "query": [
+                {
+                  "key": "username",
+                  "value": "Pippo"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Itinerary By UserId",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/itinerary/getByUserId?userId=1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "itinerary",
+                "getByUserId"
+              ],
+              "query": [
+                {
+                  "key": "userId",
+                  "value": "1"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create Itinerary",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"userId\": 1,\r\n  \"description\": \"Un piccolo itinerario per un grande Pippo\",\r\n  \"startDate\": \"2023-07-20\",\r\n  \"endDate\": \"2023-07-25\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/itinerary/create",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "itinerary",
+                "create"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Change Itinerary Status",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"id\": 5,\r\n  \"itineraryStatusId\": \"3\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/itinerary/changeStatus",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "itinerary",
+                "changeStatus"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Stay Requests",
+      "item": [
+        {
+          "name": "Create Stay",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"cityId\" : 3,\r\n    \"itineraryId\" : 2,\r\n    \"stayDate\" : \"2023-06-15\",\r\n    \"description\" : \"Tappa a Roma perché è bella\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/stay/create",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "stay",
+                "create"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "OpenMeteo API Test",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://api.open-meteo.com/v1/forecast?latitude=41.89193&longitude=12.51131&hourly=temperature_2m,relativehumidity_2m,rain,showers,snowfall,cloudcover&forecast_days=1&start_date=2023-06-26&end_date=2023-06-26&timezone=Europe%2FBerlin",
+              "protocol": "https",
+              "host": [
+                "api",
+                "open-meteo",
+                "com"
+              ],
+              "path": [
+                "v1",
+                "forecast"
+              ],
+              "query": [
+                {
+                  "key": "latitude",
+                  "value": "41.89193"
+                },
+                {
+                  "key": "longitude",
+                  "value": "12.51131"
+                },
+                {
+                  "key": "hourly",
+                  "value": "temperature_2m,relativehumidity_2m,rain,showers,snowfall,cloudcover"
+                },
+                {
+                  "key": "forecast_days",
+                  "value": "1"
+                },
+                {
+                  "key": "start_date",
+                  "value": "2023-06-26"
+                },
+                {
+                  "key": "end_date",
+                  "value": "2023-06-26"
+                },
+                {
+                  "key": "timezone",
+                  "value": "Europe%2FBerlin"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Stay By Itinerary Id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/stay/getByItineraryId?id=2",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "stay",
+                "getByItineraryId"
+              ],
+              "query": [
+                {
+                  "key": "id",
+                  "value": "2"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}

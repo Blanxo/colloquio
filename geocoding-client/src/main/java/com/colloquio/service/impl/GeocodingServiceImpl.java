@@ -1,6 +1,6 @@
 package com.colloquio.service.impl;
 
-import com.colloquio.mapper.GeocodingMapper;
+import com.colloquio.repository.GeocodingMapper;
 import com.colloquio.model.City;
 import com.colloquio.model.CityDataGeocode;
 import com.colloquio.service.GeocodingService;
